@@ -7,7 +7,7 @@ class AIService:
     def __init__(self):
         self.client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
         # Read model from environment variable with fallback to WORKING model
-        self.model = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
+        self.model = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
         
     async def stream_response(self, messages: List[Dict]) -> AsyncGenerator[str, None]:
         try:
