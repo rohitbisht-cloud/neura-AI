@@ -2,9 +2,22 @@
 
 ### AI-Powered Conversational Assistant
 
-NEURA AI is a modern full-stack AI chat application designed to provide intelligent, fast and interactive conversations through a clean and responsive interface.
+NEURA AI is a modern full-stack AI chat application built to provide fast, intelligent and interactive conversations through a clean and responsive interface.
 
-The application combines a React frontend, FastAPI backend, cloud database and AI inference service into a complete full-stack system.
+The application combines a React frontend, FastAPI backend, MySQL database and Groq AI inference into a complete full-stack conversational platform.
+
+---
+
+## 🚀 Live Demo
+
+### 🌐 Frontend
+> Add your Vercel deployment URL here
+
+### ⚡ Backend API
+https://neura-ai-1-28dr.onrender.com
+
+### 📚 API Documentation
+https://neura-ai-1-28dr.onrender.com/docs
 
 ---
 
@@ -12,22 +25,23 @@ The application combines a React frontend, FastAPI backend, cloud database and A
 
 ### 💬 AI Chat
 
-- Real-time AI responses
-- Streaming responses
+- AI-powered conversations
+- Real-time responses
+- Streaming AI responses
 - Conversation history
 - Multiple conversations
+- Context-aware conversations
 - Regenerate AI responses
 - Delete conversations
 - Archive conversations
-- Context-aware conversations
 
 ### 📎 File Processing
 
-- PDF file processing
-- DOCX file processing
-- TXT file processing
-- Extract text from uploaded documents
-- Use document content during conversations
+- PDF document processing
+- DOCX document processing
+- TXT document processing
+- Text extraction from uploaded documents
+- Document-based conversations
 
 ### 🔐 Authentication
 
@@ -37,9 +51,11 @@ The application combines a React frontend, FastAPI backend, cloud database and A
 - Password hashing
 - Protected API routes
 - Session management
-- Password recovery system
+- Password recovery
+- OTP verification
+- Password reset
 
-### 👍 Feedback
+### 👍 Feedback System
 
 - Rate AI responses
 - Positive feedback
@@ -48,10 +64,10 @@ The application combines a React frontend, FastAPI backend, cloud database and A
 
 ### 🎨 User Interface
 
-- Modern responsive design
+- Modern responsive UI
 - Dark and light themes
 - Responsive sidebar
-- Mobile-friendly interface
+- Mobile-friendly design
 - Smooth interactions
 - Toast notifications
 - Markdown-supported AI responses
@@ -84,76 +100,40 @@ The application combines a React frontend, FastAPI backend, cloud database and A
 
 - Groq API
 - Configurable AI model
-- Streaming AI responses
+- Streaming AI inference
 
 ## Database
 
-- TiDB Cloud
+- MySQL
 - MySQL-compatible database
-- Asynchronous database connection
+- Async database connection
 
 ## Deployment
 
 - Vercel — Frontend
 - Render — Backend
-- TiDB Cloud — Database
+- MySQL — Database
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-                    ┌─────────────────────┐
-                    │      NEURA AI       │
-                    │   React + Vite      │
-                    └──────────┬──────────┘
-                               │
-                               │ HTTPS
-                               ▼
-                    ┌─────────────────────┐
-                    │      FastAPI        │
-                    │      Backend        │
-                    └───────┬─────┬───────┘
-                            │     │
-                 ┌──────────┘     └──────────┐
-                 ▼                           ▼
-        ┌─────────────────┐          ┌─────────────────┐
-        │   TiDB Cloud    │          │     Groq AI     │
-        │    Database     │          │  AI Inference   │
-        └─────────────────┘          └─────────────────┘
-neura-AI/
-│
-├── backend/
-│   ├── main.py
-│   ├── database.py
-│   ├── models.py
-│   ├── schemas.py
-│   ├── auth.py
-│   ├── ai_service.py
-│   ├── file_processor.py
-│   ├── email_service.py
-│   ├── requirements.txt
-│   └── .env.example
-│
-├── database/
-│   └── schema.sql
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── contexts/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── assets/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
-│   │
-│   ├── package.json
-│   ├── vite.config.js
-│   └── tailwind.config.js
-│
-├── .gitignore
-├── render.yaml
-└── README.md
+                         ┌──────────────────────┐
+                         │      NEURA AI        │
+                         │   React + Vite       │
+                         └──────────┬───────────┘
+                                    │
+                                    │ HTTP / HTTPS
+                                    ▼
+                         ┌──────────────────────┐
+                         │       FastAPI        │
+                         │       Backend        │
+                         └───────┬───────┬──────┘
+                                 │       │
+                         ┌───────┘       └────────┐
+                         ▼                        ▼
+                ┌─────────────────┐       ┌─────────────────┐
+                │     MySQL       │       │     Groq AI     │
+                │    Database     │       │  AI Inference   │
+                └─────────────────┘       └─────────────────┘
