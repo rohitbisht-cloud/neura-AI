@@ -11,8 +11,7 @@ The application combines a React frontend, FastAPI backend, MySQL database and G
 ## 🚀 Live Demo
 
 ### 🌐 Frontend
-> Add your Vercel deployment URL here
-
+> https://neura-ai-theta.vercel.app/
 ### ⚡ Backend API
 https://neura-ai-1-28dr.onrender.com
 
@@ -137,3 +136,41 @@ https://neura-ai-1-28dr.onrender.com/docs
                 │     MySQL       │       │     Groq AI     │
                 │    Database     │       │  AI Inference   │
                 └─────────────────┘       └─────────────────┘
+neura-AI-main/
+│
+├── backend/
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── auth.py
+│   ├── ai_service.py
+│   ├── file_processor.py
+│   ├── email_service.py
+│   ├── requirements.txt
+│   ├── runtime.txt
+│   └── .env.example
+│
+├── database/
+│   └── schema.sql
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── contexts/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── assets/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   │
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   └── tailwind.config.js
+│
+├── .gitignore
+├── render.yaml
+└── README.md
